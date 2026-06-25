@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import HeaderComponent from './components/header/header_component'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1>Ola</h1>
+    <div className='min-h-screen w-full bg-background font-poppins'>
+      <HeaderComponent />
+    </div>
   )
 }
 
