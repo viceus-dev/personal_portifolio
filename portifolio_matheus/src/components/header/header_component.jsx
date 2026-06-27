@@ -2,7 +2,7 @@ import HeaderMenu from "./header_menu";
 
 function HeaderComponent(){
     return (
-        <div className="flex justify-between items-center gap-16 py-4 px-8">
+        <div className="flex justify-between items-center gap-16 py-4 px-8 mb-4">
             <div>
                 {/*Empty*/}
             </div>
@@ -14,7 +14,7 @@ function HeaderComponent(){
 
             <div>
                  {/*Image CTA */}
-                <img src="./src/assets/Images/Email-me.svg" alt="Email me"/>
+                <img src="/images/Email-me.svg" alt="Email me"/>
             </div>    
         </div>
     );
