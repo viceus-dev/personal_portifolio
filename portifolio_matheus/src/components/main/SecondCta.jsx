@@ -10,7 +10,7 @@ function SecondCta(){
     ]
 
     return (
-        <div className="flex justify-around h-[49px] border-2 rounded-full w-2/3 mt-15 items-center">
+        <div className="h-[60px] border-2 rounded-full w-full mt-20 px-20 flex items-center justify-between">
             {/* Available */}
             <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-[#00E692] rounded-[2px]"></div>
@@ -25,19 +25,19 @@ function SecondCta(){
              </div>
 
             {/* Links */}
-
-            <ul className="flex gap-4">
-                {links.map(function(link,index){
-                    return(
-                        <li key={index}>
-                            <a href={link.link}>
-                                <img src={link.img} alt={link.name} />
-                            </a>
-                        </li>
-                    )
-                })}
-            </ul>
-
+            <div>
+                <ul className="flex gap-4">
+                    {links.map(function(link,index){
+                        return(
+                            <li key={index}>
+                                <a href={link.link}>
+                                    <img src={link.img} alt={link.name} />
+                                </a>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
         </div>
     )
 }

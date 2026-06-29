@@ -42,18 +42,13 @@ function MainComponent() {
       </p>
 
       {/* Botões */}
-      <div className="flex gap-10 mt-12">
-        <button className="h-[50px] w-[213px] bg-[#1A1A1A] text-white hover:bg-[#721CFF] rounded-[12px] transition-all duration-300">
-          Ver Projetos
-        </button>
-
-        <button className="h-[50px] w-[213px] bg-[#1A1A1A] text-white hover:bg-[#721CFF] rounded-[12px] transition-all duration-300">
-          Entrar em Contato
-        </button>
+      <div className="flex gap-10 mt-15">
+        <a href="#" className="w-[200px] h-[60px] bg-[#1A1A1A] hover:bg-[#721CFF] duration-200 flex items-center justify-center text-[#f5f5f5] rounded-[10px]">Ver Projetos</a>
+        <a href="#" className="w-[200px] h-[60px] bg-[#1A1A1A] hover:bg-[#721CFF] duration-200 flex items-center justify-center text-[#f5f5f5] rounded-[10px]">Entrar em Contato</a>
       </div>
 
       {/* Stack */}
-      <div className="mt-12">
+      <div className="mt-20">
         <ul className="flex gap-6">
           {work_stack.map((stack, index) => (
             <li key={index} className="flex items-center gap-2">
