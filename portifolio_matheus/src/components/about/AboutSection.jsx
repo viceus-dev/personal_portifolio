@@ -1,41 +1,100 @@
-function AboutSection(){
-    return(
-        <div className="mt-25 grid gap-15 mt-40">
-            <div className=" span-rows-2 text-4xl font-bold">
-                <p>Generalista por <span className="text-[#721CFF]">Natureza</span>,</p>
-                <p><span className="text-[#721CFF]"> Engenheiro</span> por Obssessão</p>
-            </div>
-            <div className="text-left flex-columns">
-                <p className="mb-4">Olá, eu sou <span className="text-[#721CFF] font-bold">Matheus Vicente.</span></p>
-                <p>Mais do que programar, meu foco é resolver problemas e transformar ideias em soluções reais.
-                    Isso me levou a desenvolver um perfil generalista, unindo desenvolvimento, dados, automação e visão de produto.
-                    Meu objetivo é direcionar meu perfil para a área de Machine Learning e construir soluções tecnológicas de ponta a ponta.</p>
-            </div>
+function AboutSection() {
+  return (
+    <section className="mt-32 px-4 sm:px-6 lg:px-0">
 
-            <hr className="h-[2px] bg-[#721CFF] border-0 mt-10 mb-10"/>
-            
-            <div className="grid grid-cols-3 grid-rows-3 gap-10">
-                <div className="col-span-2 border-[2px] rounded-[10px] px-8 py-8">
-                    <p className="font-bold mb-4">Dev Software</p>
-                    <p>React • JavaScript • HTML • CSS • REST APIs • Docker • MongoDB • SQLite</p>
-                </div>
+      {/* Header */}
+      <div  id="Sobre" className="grid gap-10 md:grid-cols-2 md:items-center">
 
-                <div className="row-span-2 bg-[#1A1A1A] text-[#F5F5F5] px-8 py-8 rounded-[10px]">
-                    <p className="font-bold text-4xl mb-4">Vamos <span className="text-[#721CFF] font-bold">construir</span> algo?</p>
-                    <p>Desenvolvo soluções focadas em dados, automação e experiência moderna.</p>
-                    <div className="mt-10 flex gap-10 items-center ">
-                        <a href="#" className="w-40 h-10 border-solid border-[2px] boder-[#F5F5F5] rounded-full flex items-center justify-center hover:border-[0px] hover:bg-[#721CFF] trasition-all duration-90"> Linkedin</a>
-                        <a href="#" className="w-40 h-10 border-solid border-[2px] boder-[#F5F5F5] rounded-full flex items-center justify-center hover:border-[0px] hover:bg-[#721CFF] trasition-all duration-90">Email</a>
-                    </div>
-                </div>
-
-                <div className="col-span-2 border-[2px] rounded-[10px] px-8 py-8">
-                    <p className="font-bold mb-4" >Dados e ML</p>
-                    <p>Python • Pandas • Matplotlib • Scikit-learn • Streamlit</p>
-                </div>
-            </div>
+        <div className="text-3xl font-bold leading-tight md:text-5xl">
+          <p>
+            Generalista por{" "}
+            <span className="text-[#721CFF]">Natureza</span>,
+          </p>
+          <p>
+            <span className="text-[#721CFF]">Engenheiro</span> por obsessão
+          </p>
         </div>
-    );
+
+        <div className="text-[#1A1A1A] leading-7">
+          <p className="mb-4">
+            Olá, eu sou{" "}
+            <span className="font-bold text-[#721CFF]">
+              Matheus Vicente.
+            </span>
+          </p>
+
+          <p>
+            Meu foco é resolver problemas e transformar ideias em soluções reais.
+            Isso me levou a um perfil generalista envolvendo desenvolvimento,
+            dados, automação e visão de produto. Meu objetivo é atuar com
+            Machine Learning e soluções de ponta a ponta.
+          </p>
+        </div>
+
+      </div>
+
+      <hr className="my-25 border border-2 rounded-full border-[#721CFF]" />
+
+      {/* GRID PRINCIPAL */}
+      <div className="grid gap-6 lg:grid-cols-3">
+
+        {/* DEV + ML */}
+        <div className="flex flex-col gap-6 lg:col-span-2">
+
+          {/* Dev */}
+          <div className="rounded-xl border border-[#1A1A1A] border-2 p-6">
+            <p className="mb-3 font-semibold">Dev Software</p>
+            <p className="text-[#1A1A1A]">
+              React • JavaScript • HTML • CSS • REST APIs • Docker • MongoDB • SQLite
+            </p>
+          </div>
+
+          {/* ML */}
+          <div className="rounded-xl border border-[#1A1A1A] border-2 p-6">
+            <p className="mb-3 font-semibold">Dados e ML</p>
+            <p className="text-[#1A1A1A]">
+              Python • Pandas • Matplotlib • Scikit-learn • Streamlit
+            </p>
+          </div>
+
+        </div>
+
+        {/* CTA */}
+        <div className="rounded-xl bg-[#1A1A1A] p-6 text-white flex flex-col justify-between">
+
+          <div>
+            <p className="mb-4 text-2xl font-bold">
+              Vamos <span className="text-[#721CFF]">construir</span> algo?
+            </p>
+
+            <p className="text-zinc-300">
+              Desenvolvimento soluções focadas em dados, automação e experiência moderna.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-8 sm:flex-row justify-center px-8">
+            <a
+              href="https://www.linkedin.com/in/viceus"
+              className="rounded-full border border-zinc-600 px-6 py-2 text-center transition hover:bg-[#721CFF] hover:border-transparent"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=viceus.dev@gmail.com&su=Contato"
+              className="rounded-full border border-zinc-600 px-6 py-2 text-center transition hover:bg-[#721CFF] hover:border-transparent"
+              target="_blank"
+            >
+              Email
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
 }
 
 export default AboutSection;

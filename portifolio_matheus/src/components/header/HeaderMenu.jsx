@@ -2,14 +2,14 @@ import HeaderMenuItem from "./HeaderMenuItem";
 
 function HeaderMenu(){
 
-    const menu_items = ["Home","Habilidades","Projetos"]
+    const menu_items = ["Home","Sobre","Projetos"]
     
     return(
-        <div>
-            <ul className="flex gap-8">
+        <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+            <ul className="hidden md:flex items-center gap-8">
                 {menu_items.map(function(item){
                     return (
-                        <HeaderMenuItem target={item} value={item}/>
+                        <HeaderMenuItem key={item} target={item} value={item}/>
                     )
                 })}
 

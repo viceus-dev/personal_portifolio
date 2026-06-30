@@ -1,104 +1,103 @@
-import seta from "/images/seta.svg"
-import coding from "/images/coding.png"
-function ProjectsSection(){
-    const ProjectItem = [{
-        status : "Desenvolvimento",
-        title : "Análise SQL Vendas",
-        subtitle : "Análise SQL de dados de vendas de um e-commerce fornecidos pelo Kaggle",
-        stack : ["SQLite","Python","Pandas","React","Tailswind"],
-        link : "#"
-    }]
+import PROJECTS from "./ProjectData.jsx";
+import Seta from "/images/seta.svg?react ";
+import coding from "/images/coding.png";
 
-    const test_stack = ["SQLite","Python","Pandas","React","TailWind"]
-    return(
-        <div>
-            <div className=" span-rows-2 text-4xl font-bold">
-                <p><span className="text-[#721CFF]">Trabalhos</span> e <span className="text-[#721CFF]">Projetos</span> recentes</p>
-            </div>
+function ProjectsSection() {
+  const STATUS = {
+    Desenvolvimento: {
+      label: "Desenvolvimento",
+      className: "bg-yellow-400 text-black",
+    },
+    Planejamento: {
+      label: "Planejamento",
+      className: "bg-blue-500 text-white",
+    },
+  };
 
-            <div className="mt-20 flex flex-wrap justify-between">
-                <div className="w-90 h-120 border-[2px] mb-20 rounded-[12px] overflow-hidden">
-                    <div className="relative">
-                        <img src={coding} alt="" className="w-full object-fit rounded-t-[10px]"/>
-                        <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-[#f5f5f5] rounded-[5px]">
-                            <div className="w-2 h-2 bg-[#FFB703] rounded-[2px]"></div>
-                            <div>Desenvolvimento</div>
-                        </div>
-                    </div>
+  return (
+    <section className="mt-32 px-4 sm:px-6 lg:px-0">
 
-                    <div className="px-4 mt-4">
-                        <div className="font-bold text-heading mb-4 text-xl">Análise SQL Vendas</div>
-                        <div className="text-body text-sm mb-4">Análise SQL de dados de vendas de um e-commerce fornecidos pelo Kaggle</div>
-                        <div className="flex gap-4 flex-wrap text-xs">
-                            {test_stack.map(function(item,index){
-                                return(
-                                    <div key={index} className=" px-3 py-1 rounded-[5px] bg-[#721CFF] ">{item}</div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                    <div className="mt-4 py-5 bg-[#1A1A1A] flex justify-end items-center gap-4 pr-10">
-                        <p className="text-[#F5F5F5]">Explorar projeto</p>
-                        <img src={seta} alt="" />
-                    </div>
+      {/* Title */}
+      <h2 className="text-3xl font-bold md:text-5xl">
+        <span className="text-[#721CFF]">Trabalhos</span> e{" "}
+        <span className="text-[#721CFF]">Projetos</span> recentes
+      </h2>
+
+      {/* Grid */}
+      <div id="Projetos" className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        {PROJECTS.map((project) => {
+
+          const status = STATUS[project.status] || {
+            label: project.status,
+            className: "bg-gray-400 text-black",
+          };
+
+          return (
+            <div
+              key={project.title}
+              className="flex flex-col overflow-hidden rounded-xl border border-[#1A1A1A] bg-[#F5F5F5]"
+            >
+
+              {/* Image */}
+              <div className="relative">
+                <img
+                  src={coding}
+                  alt={project.title}
+                  className="h-48 w-full object-cover"
+                />
+
+                {/* Status */}
+                <div className="absolute right-4 top-4">
+                  <span
+                    className={`px-3 py-1 rounded text-xs font-medium ${status.className}`}
+                  >
+                    {status.label}
+                  </span>
                 </div>
-                <div className="w-90 h-120 border-[2px] mb-20 rounded-[12px] overflow-hidden">
-                    <div className="relative">
-                        <img src={coding} alt="" className="w-full object-fit rounded-t-[10px]"/>
-                        <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-[#f5f5f5] rounded-[5px]">
-                            <div className="w-2 h-2 bg-[#FFB703] rounded-[2px]"></div>
-                            <div>Desenvolvimento</div>
-                        </div>
-                    </div>
+              </div>
 
-                    <div className="px-4 mt-4">
-                        <div className="font-bold text-heading mb-4 text-xl">Análise SQL Vendas</div>
-                        <div className="text-body text-sm mb-4">Análise SQL de dados de vendas de um e-commerce fornecidos pelo Kaggle</div>
-                        <div className="flex gap-4 flex-wrap text-xs">
-                            {test_stack.map(function(item,index){
-                                return(
-                                    <div key={index} className=" px-3 py-1 rounded-[5px] bg-[#721CFF] ">{item}</div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                    <div className="mt-4 py-5 bg-[#1A1A1A] flex justify-end items-center gap-4 pr-10">
-                        <p className="text-[#F5F5F5]">Explorar projeto</p>
-                        <img src={seta} alt="" />
-                    </div>
-                </div>
-                <div className="w-90 h-120 border-[2px] mb-20 rounded-[12px] overflow-hidden">
-                    <div className="relative">
-                        <img src={coding} alt="" className="w-full object-fit rounded-t-[10px]"/>
-                        <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-[#f5f5f5] rounded-[5px]">
-                            <div className="w-2 h-2 bg-[#FFB703] rounded-[2px]"></div>
-                            <div>Desenvolvimento</div>
-                        </div>
-                    </div>
+              {/* Content */}
+              <div className="flex flex-1 flex-col p-5">
 
-                    <div className="px-4 mt-4">
-                        <div className="font-bold text-heading mb-4 text-xl">Análise SQL Vendas</div>
-                        <div className="text-body text-sm mb-4">Análise SQL de dados de vendas de um e-commerce fornecidos pelo Kaggle</div>
-                        <div className="flex gap-4 flex-wrap text-xs">
-                            {test_stack.map(function(item,index){
-                                return(
-                                    <div key={index} className=" px-3 py-1 rounded-[5px] bg-[#721CFF] ">{item}</div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                    <div className="mt-4 py-5 bg-[#1A1A1A] flex justify-end items-center gap-4 pr-10">
-                        <p className="text-[#F5F5F5]">Explorar projeto</p>
-                        <img src={seta} alt="" />
-                    </div>
+                <h3 className="text-xl font-bold">
+                  {project.title}
+                </h3>
+
+                <p className="mt-3 text-sm text-zinc-500">
+                  {project.subtitle}
+                </p>
+
+                {/* Stack */}
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded bg-[#721CFF] px-3 py-1 text-xs text-white"
+                    >
+                      {item}
+                    </span>
+                  ))}
                 </div>
-                
+
+                {/* CTA */}
+                <a
+                  href={project.link}
+                  className="mt-auto flex items-center justify-end gap-3 pt-6 text-sm font-semibold text-black transition hover:text-[#721CFF]"
+                >
+                  Explorar projeto
+                  <img src={Seta} alt="" className="h-4 w-4 text-[#1A1A1A] hover:text-[#721CFF]" />
+                </a>
+
+              </div>
 
             </div>
-        </div>
-    )
+          );
+        })}
 
-
+      </div>
+    </section>
+  );
 }
 
 export default ProjectsSection;

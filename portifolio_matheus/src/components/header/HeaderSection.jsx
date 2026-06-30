@@ -2,7 +2,7 @@ import HeaderMenu from "./HeaderMenu";
 
 function HeaderSection(){
     return (
-        <div className="flex justify-between items-center gap-16 py-4 px-8 mb-4">
+        <header className="flex justify-between items-center py-4 px-8 mb-4">
             <div>
                 {/*Empty*/}
             </div>
@@ -12,11 +12,11 @@ function HeaderSection(){
                   <HeaderMenu/>
             </div>
 
-            <div>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=viceus.dev@gmail.com&su=Contato" target="_blank">
                  {/*Image CTA */}
                 <img src="/images/Email-me.svg" alt="Email me"/>
-            </div>    
-        </div>
+            </a>    
+        </header>
     );
 };
 

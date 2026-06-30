@@ -7,7 +7,7 @@ import FooterSection from './components/footer/FooterSection'
 function App() {
   return (
     <div className='min-h-screen w-full bg-background font-poppins'>
-      <div className=' pl-64 pr-64'>
+      <div className=' mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16'>
         <HeaderSection />
         <MainSection />
         <AboutSection />
