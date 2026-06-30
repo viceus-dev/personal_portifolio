@@ -1,9 +1,9 @@
-import javascript from "../../assets/Images/javascript.svg";
-import pandas from "../../assets/Images/pandas.svg";
-import python from "../../assets/Images/python.svg";
-import react_icon from "../../assets/Images/react_icon.svg";
-import sqlite from "../../assets/Images/sqlite.svg";
-import tailwind from "../../assets/Images/tailwind.svg";
+import javascript from "/images/icons/javascript.svg";
+import pandas from "/images/icons/pandas.svg";
+import python from "/images/icons/python.svg";
+import react_icon from "/images/icons/react_icon.svg";
+import sqlite from "/images/icons/sqlite.svg";
+import tailwind from "/images/icons/tailwind.svg";
 
 import SecondCta from "./SecondCta";
 
