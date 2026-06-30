@@ -1,4 +1,4 @@
-function ProfileComponent(){
+function AboutSection(){
     return(
         <div className="mt-25 grid gap-15 mt-40">
             <div className=" span-rows-2 text-4xl font-bold">
@@ -38,4 +38,4 @@ function ProfileComponent(){
     );
 }
 
-export default ProfileComponent;
+export default AboutSection;

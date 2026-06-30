@@ -1,4 +1,4 @@
-import HeaderMenuItem from "./header_menu_item";
+import HeaderMenuItem from "./HeaderMenuItem";
 
 function HeaderMenu(){
 

@@ -3,10 +3,11 @@ import pandas from "../../assets/Images/pandas.svg";
 import python from "../../assets/Images/python.svg";
 import react_icon from "../../assets/Images/react_icon.svg";
 import sqlite from "../../assets/Images/sqlite.svg";
-import tailwind from "../../assets/Images/tailwind.svg";import SecondCta from "./SecondCta";
+import tailwind from "../../assets/Images/tailwind.svg";
+import SecondCta from "./SecondCta";
 ;
 
-function MainComponent() {
+function MainSection() {
   const work_stack = [
     { img: python, name: "Python" },
     { img: javascript, name: "Javascript" },
@@ -66,4 +67,4 @@ function MainComponent() {
   );
 }
 
-export default MainComponent;
+export default MainSection;

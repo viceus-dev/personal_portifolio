@@ -1,6 +1,6 @@
-import HeaderMenu from "./header_menu";
+import HeaderMenu from "./HeaderMenu";
 
-function HeaderComponent(){
+function HeaderSection(){
     return (
         <div className="flex justify-between items-center gap-16 py-4 px-8 mb-4">
             <div>
@@ -20,4 +20,4 @@ function HeaderComponent(){
     );
 };
 
-export default HeaderComponent;
+export default HeaderSection;
