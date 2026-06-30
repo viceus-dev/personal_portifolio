@@ -1,5 +1,5 @@
 import PROJECTS from "./ProjectData.jsx";
-import Seta from "/images/seta.svg?react ";
+import Seta from "/images/seta.svg";
 import coding from "/images/coding.png";
 
 function ProjectsSection() {
