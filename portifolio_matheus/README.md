@@ -1,16 +1,113 @@
-# React + Vite
+# Viceus Dev - Portifólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Meu portfólio desenvolvido para reunir projetos e garantir visibilidade seja para contratos de freelance ou até mesmo oportunidades de estágio/jr.
 
-Currently, two official plugins are available:
+O objetivo deste projeto foi criar uma aplicação moderna, responsiva e de fácil uso, utilizando React, Vite e Tailwind CSS 4, priorizando a componentização e a separação entre dados e interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias
 
-## React Compiler
+* React
+* Vite
+* Tailwind CSS 4
+* JavaScript (ES6+)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estrutura do Projeto
 
-## Expanding the ESLint configuration
+```text
+public/
+├── docs/
+└── images/
+    └── icons/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├── assets/
+│   ├── fonts/
+│   └── images/
+└── components/
+    ├── header/
+    ├── main/
+    ├── about/
+    ├── projects/
+    └── footer/
+```
+
+Cada seção da página foi desenvolvida como um componente independente, facilitando a manutenção e futuras expansões.(Novidades em Breve)
+
+## Funcionalidades
+
+* Interface totalmente responsiva
+* Navegação em página única (Single Page)
+* Seções independentes utilizando componentes React
+* Organização simples para inclusão de novos projetos
+* Deploy utilizando Netlify
+
+## Decisões de implementação
+
+Durante o desenvolvimento, busquei evitar informações duplicadas e facilitar futuras atualizações.
+
+### Lista de projetos centralizada
+
+Os projetos são armazenados em um único arquivo (`ProjectData.jsx`).
+
+Cada objeto contém todas as informações necessárias para renderização do card:
+
+* status
+* título
+* descrição
+* tecnologias utilizadas
+* link
+
+Dessa forma, adicionar um novo projeto exige apenas incluir um novo objeto no array, sem alterar a interface.
+
+```javascript
+{
+    status: "Desenvolvimento",
+    title: "...",
+    subtitle: "...",
+    stack: [...],
+    link: "..."
+}
+```
+
+## Como executar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/viceus-dev/personal_portifolio.git
+```
+
+Entre na pasta:
+
+```bash
+cd portifolio_matheus
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
+
+## Próximas melhorias
+
+* Integração dos links reais dos projetos
+* Animações estilizadas
+* Internacionalização (Português/Inglês)
+* Testes de componentes
+* Otimização de imagens e componentes
+
+## 📄 Licença
+Projeto desenvolvido para fins de estudo e apresentação profissional.
